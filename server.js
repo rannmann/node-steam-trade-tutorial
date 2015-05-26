@@ -6,7 +6,6 @@ password = 'your_password'; // Bot's Steam Password
 // Define all our included variables
 var steam      = require('steam');
 var steamtrade = require('steam-trade');
-var fs         = require('fs');
 var winston    = require('winston');
 var readline   = require('readline');
 
