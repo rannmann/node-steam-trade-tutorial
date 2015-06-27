@@ -144,7 +144,7 @@ client.on('webSessionID', function(sessionid) {
 
 // If a user adds me...
 client.on('friend', function(steamID, relationship) {
-    if (relationship == steam.EFriendRelationship.PendingInvitee) {
+    if (relationship == steam.EFriendRelationship.RequestRecipient) {
         logger.info('[' + steamID + '] Accepted friend request');
         client.addFriend(steamID);
     }
