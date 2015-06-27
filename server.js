@@ -10,7 +10,7 @@ var winston    = require('winston');
 
 //These are included node modules that don't require installation via npm
 var readline   = require('readline');
-var fs = require('fs');
+var fs         = require('fs');
 
 // We have to use application IDs in our requests, so this is just a helper
 var appid = {
