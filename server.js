@@ -7,7 +7,10 @@ password = 'your_password'; // Bot's Steam Password
 var steam      = require('steam');
 var steamtrade = require('steam-trade');
 var winston    = require('winston');
+
+//These are included node modules that don't require installation via npm
 var readline   = require('readline');
+var fs         = require('fs');
 
 // We have to use application IDs in our requests, so this is just a helper
 var appid = {
@@ -141,7 +144,7 @@ client.on('webSessionID', function(sessionid) {
 
 // If a user adds me...
 client.on('friend', function(steamID, relationship) {
-    if (relationship == steam.EFriendRelationship.PendingInvitee) {
+    if (relationship == steam.EFriendRelationship.RequestRecipient) {
         logger.info('[' + steamID + '] Accepted friend request');
         client.addFriend(steamID);
     }
